@@ -3,13 +3,13 @@ terraform {
 
   required_providers {
     aws = {
-        source = "hashicorp/aws"
-        version = ">= 5.38"
+      source  = "hashicorp/aws"
+      version = ">= 5.38"
     }
 
     random = {
-        source = "hashicorp/random"
-        version = "3.6.0"
+      source  = "hashicorp/random"
+      version = "3.6.0"
     }
 
     tls = {
@@ -30,7 +30,7 @@ terraform {
 
   backend "s3" {
     bucket = "k8s-terra"
-    key = "terraform.tfstate"
+    key    = "terraform.tfstate"
     region = "us-east-1"
   }
 }
